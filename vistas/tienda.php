@@ -1,17 +1,3 @@
-<?php
-	
-include_once '../includes/user.php';
-include_once '../includes/user_session.php';
-
-
-	$user = new User();
-	$userSession = new UserSession();
-
-	$user->setUser($userSession->get_current_user());
-	$nom= $user->getNombre();
-
-
-?>
 
 <!DOCTYPE html>
 <html>
@@ -21,7 +7,9 @@ include_once '../includes/user_session.php';
 <body>
 	<h1>
 		<?php echo "el nombre de la surundaio";	
-			echo $nom;
+			session_start();
+			$usuario = $_SESSION['username'];
+			echo $usuario;
 		?>
 		sy uididenjdiwun
 	</h1>

@@ -1,37 +1,18 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/estilos.css">
+<body>
+	<form id="form-login" action="includes/logueo.php" method="post">
 	
-include_once 'includes/user.php';
-include_once 'includes/user_session.php';
-
-$userSession = new UserSession();
-$user = new User();
-
-if(isset($_SESSION['user'])){
-	//echo "Hay sesión";
-	$user->setUser($userSession->get_current_user());
-	include_once ' vistas/home.php';
-}else if(isset($_POST['username']) && isset($_POST['password'])){
-	//echo "validacion de login";
-
-	$userForm = $_POST['username'];
-	$passForm = $_POST['password'];
-
-	if ($user->userExists($userForm, $passForm)) {
-		//echo "usuario vaidado";
-		$userSession->setCurrentUser($userForm);
-		$user->setUser($userForm);
-
-		include_once 'vistas/home.php';
-	}else{
-		//echo "nombre de usuario o contraseña incorrecto";
-		$errorLogin = "nombre de usuario y/o pass es incorrecto";
-		include_once 'vistas/login.php';
-
-	}
-
-}else{
-	include_once 'vistas/login.php';
-}
-
-
-?>
+		<h2>iniciar sesión</h2>
+		<input type="text" name="usuario">
+		<br>
+		<input type="text" name="clave">
+		<br>
+		<button>enviar</button>
+	</form>
+</body>
+</html>
