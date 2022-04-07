@@ -15,7 +15,7 @@
 
 	if($array['contar']>0){
 		$_SESSION['username'] = $usuario;
-		header("location: ../vistas/tienda.php");
+		header("location: index.php");
 	}else{
 		echo "datos incorrectos";
 	}

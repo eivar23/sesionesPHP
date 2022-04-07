@@ -15,4 +15,14 @@
 		<button>enviar</button>
 	</form>
 </body>
+<?php 
+session_start();
+ $_SESSION['username'];
+if($usuario != null){
+	echo $usuario;
+}else{
+	echo "soy un ícono";
+}
+
+?>
 </html>
