@@ -23,6 +23,7 @@ include_once '../includes/user_session.php';
 		<?php echo "el nombre de la surundaio";	
 			echo $nom;
 		?>
+		sy uididenjdiwun
 	</h1>
 	
 
