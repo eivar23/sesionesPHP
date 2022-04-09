@@ -21,7 +21,7 @@ session_start();
 if($usuario != null){
 	echo $usuario;
 }else{
-	echo "soy un ícono";
+	echo "soy un menu desplegable y mostraré mucha info";
 }
 
 ?>
